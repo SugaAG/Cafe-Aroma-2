@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Aroma - Renovado</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f5f0;
+      color: #3e2723;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #5d4037;
+      color: #fff;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffcc80;
+    }
+    
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    nav a:hover {
+      color: #ffcc80;
+    }
+    
+    .search {
+      display: flex;
+      gap: 5px;
+    }
+    
+    .search input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 20px;
+    }
+    
+    .search button {
+      background: #8d6e63;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 20px;
+      color: white;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .welcome {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #8d6e63;
+      color: #fff;
+      margin: 2rem auto;
+      border-radius: 10px;
+    }
+    
+    .welcome h2 {
+      color: #ffcc80;
+      margin-bottom: 1rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #ff9800;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .products {
+      padding: 2rem 0;
+    }
+    
+    .products h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #5d4037;
+    }
+    
+    .product-list {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .product {
+      background: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .product img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      background: #d7ccc8;
+    }
+    
+    .product-name {
+      font-weight: bold;
+      margin: 10px 0;
+      color: #5d4037;
+    }
+    
+    .btn-small {
+      display: inline-block;
+      padding: 8px 20px;
+      background: #8d6e63;
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .promo {
+      background: #ffecb3;
+      text-align: center;
+      padding: 1.5rem;
+      font-weight: bold;
+      margin: 2rem auto;
+      border-radius: 8px;
+      color: #5d4037;
+    }
+
+    .testimonials {
+      text-align: center;
+      font-style: italic;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #efebe9;
+      border-radius: 10px;
+    }
+
+    .about {
+      padding: 2rem;
+      text-align: center;
+      background: #fff;
+      border-radius: 10px;
+      margin: 2rem auto;
+    }
+
+    .map {
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    .map-placeholder {
+      background: #d7ccc8;
+      border: 2px dashed #8d6e63;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .newsletter {
+      text-align: center;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #5d4037;
+      border-radius: 10px;
+      color: white;
+    }
+    
+    .newsletter input {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+    
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ff9800;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #3e2723;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .footer-links a {
+      color: #ffcc80;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    
+    .footer-info {
+      margin: 1rem 0;
+      color: #d7ccc8;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+      
+      .product {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .newsletter input {
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">☕ Café Aroma</div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <div class="search">
+    <input type="text" placeholder="Buscar..." />
+    <button>🔍</button>
+  </div>
+</header>
+
+<main>
+  <section class="welcome" id="inicio">
+    <h2>Bienvenidos a Café Aroma</h2>
+    <p>El mejor café de la ciudad, recién hecho para ti.</p>
+    <a href="#menu" class="btn">Haz tu pedido</a>
+  </section>
+
+
+<section class="products" id="menu">
+  <h3>Productos Destacados</h3>
+  <div class="product-list">
+    <article class="product">
+      <img src="images/cafelatte.jpg" alt="Café Latte">
+      <div class="product-name">Café Latte</div>
+      <a href="#" class="btn-small">Ver más</a>
+    </article>
+    <article class="product">
+      <img src="images/espresso.jpg" alt="Espresso">
+      <div class="product-name">Espresso</div>
+      <a href="#" class="btn-small">Ver más</a>
+    </article>
+    <article class="product">
+      <img src="images/cappuccino.jpg" alt="Cappuccino">
+      <div class="product-name">Cappuccino</div>
+      <a href="#" class="btn-small">Ver más</a>
+    </article>
+  </div>
+</section>
+
+
+  <section class="promo">
+    ☕ <strong>Promoción del día: 2x1 en Cappuccino</strong> ☕
+  </section>
+
+  <section class="testimonials">
+    <p>"El mejor café que he probado en años!" - María G.</p>
+    <p>"Ambiente acogedor y excelente atención." - Juan P.</p>
+  </section>
+
+  <section class="about">
+    <h3>Sobre Nosotros</h3>
+    <p>En Café Aroma no solo servimos café: creamos experiencias. Queremos que cada visita sea un espacio acogedor donde disfrutes de un ambiente cálido, buena compañía y el mejor café de la ciudad.</p>
+  </section>
+
+  <section class="map">
+    <h3>Encuéntranos</h3>
+    <div class="map-placeholder">[ Mapa Placeholder ]</div>
+  </section>
+
+  <section class="newsletter" id="contacto">
+    <h3>Suscríbete a nuestro Newsletter</h3>
+    <input type="email" placeholder="Tu email">
+    <button>Suscribirme</button>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="#">Políticas</a> | 
+    <a href="#">FAQ</a> | 
+    <a href="#contacto">Contacto</a>
+  </div>
+  <div class="footer-info">
+    Horarios: L-V 8am - 8pm / S 9am - 6pm <br>
+    Av. Principal 123, Chimbote - 999 888 777
+  </div>
+  <div class="social">
+    🌐 🔵 🟠 🟢  <p>Síguenos en redes sociales</p>
+  </div>
+</footer>
+
+</body>
+</html>
